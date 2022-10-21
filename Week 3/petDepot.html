@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Vue.js Pet Depot</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1 v-text="sitename"></h1>
+        <h2>Hi</h2>
+      </header>
+      <main>
+        <figure>
+          <!-- binds src attribute to the image in the data element -->
+          <img v-bind:src="product.image" />
+        </figure>
+        <h2 v-text="product.title"></h2>
+        <p v-html="product.description"></p>
+        <!-- Moustache syntax is the shorter version of v-text -->
+        <p>Price: {{product.price}}</p>
+        <input type="button" id='add' value="Add to cart" v-on:click="addToCart" />
+      </main>
+    </div>
+    <script type="text/javascript">
+      var webstore = new Vue({
+        el: "#app",
+        data: {
+          sitename: "Vue.js Pet Depot",
+          product: {
+            id: 1001,
+            title: "Cat Food, 25lb bag",
+            description:
+              "A 25 pound bag of <em>irresistible</em>," +
+              " organic goodness for your cat.",
+            price: 2000,
+            image: "Images/catFood.jpg_480Wx480H",
+          },
+          cart: [], //array to store items
+        },
+        methods: {
+          addToCart: function () {
+            this.cart.push(this.product.id);
+            console.log(this.cart)
+            document.getElementById('add').disable =true
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
