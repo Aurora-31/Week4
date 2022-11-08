@@ -32,6 +32,7 @@
           <p v-html="product.description"></p>
           <!-- Moustache syntax is the shorter version of v-text -->
           <p>Price: {{product.price}}</p>
+          <p>Available Stock: {{product.inventory}}</p>
           <!-- <input
           type="button"
           id="add"
@@ -169,6 +170,7 @@
         },
         methods: {
           addToCart (product) {
+            product.inventory--
             this.cart.push(product.id)
             console.log(this.cart);
             // document.getElementById('add').disable =true

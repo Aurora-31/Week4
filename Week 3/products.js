@@ -8,6 +8,7 @@ let products =[
         price: 2000,
         image: "Images/catFood.jpg_480Wx480H",
         availableInventory: 10,
+        inventory:10,
         rating:3
       },
       {
@@ -19,6 +20,7 @@ let products =[
         price: 2100,
         image: "Images/2.jpg",
         availableInventory: 4,
+        inventory:4,
         rating:4
       },
       {
@@ -30,6 +32,7 @@ let products =[
         price: 2500,
         image: "Images/3.jpg",
         availableInventory: 8,
+        inventory:8,
         rating:2
       },
       {
@@ -41,6 +44,7 @@ let products =[
         price: 900,
         image: "Images/4.jpg",
         availableInventory: 8,
+        inventory:8,
         rating:1
       },
       {
@@ -52,6 +56,7 @@ let products =[
         price: 5000,
         image: "Images/5.jpg",
         availableInventory: 1,
+        inventory:1,
         rating:5
       }
 ]
