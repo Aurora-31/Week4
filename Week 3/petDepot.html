@@ -12,6 +12,7 @@
     <div id="app">
       <header>
         <h1 v-text="sitename"></h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
         <button v-on:click="showCheckout">
           <!-- 'cartItemCount' is used the same way as a data property. -->
           {{ cartItemCount }}
@@ -136,17 +137,17 @@
         data: {
           sitename: "Vue.js Pet Depot",
           products: products,
-          product: {
-            id: 1001,
-            title: "Cat Food, 25lb bag",
-            description:
-              "A 25 pound bag of <em>irresistible</em>," +
-              " organic goodness for your cat.",
-            price: 2000,
-            image: "Images/catFood.jpg_480Wx480H",
-            availableInventory: 10,
-            rating:3
-          },
+          // product: {
+          //   id: 1001,
+          //   title: "Cat Food, 25lb bag",
+          //   description:
+          //     "A 25 pound bag of <em>irresistible</em>," +
+          //     " organic goodness for your cat.",
+          //   price: 2000,
+          //   image: "Images/catFood.jpg_480Wx480H",
+          //   availableInventory: 10,
+          //   rating:3
+          // },
           cart: [], //array to store items
           showProduct: true,
           order: {
